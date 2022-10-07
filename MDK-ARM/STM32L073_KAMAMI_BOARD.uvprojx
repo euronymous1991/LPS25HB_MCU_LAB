@@ -414,6 +414,11 @@
               <FileType>1</FileType>
               <FilePath>..\Core\Src\LPS25HB.c</FilePath>
             </File>
+            <File>
+              <FileName>4_digit_7_segment.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Core\Src\4_digit_7_segment.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>

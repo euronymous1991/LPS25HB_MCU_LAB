@@ -4,6 +4,7 @@
 "stm32l073_kamami_board\stm32l0xx_it.o"
 "stm32l073_kamami_board\stm32l0xx_hal_msp.o"
 "stm32l073_kamami_board\lps25hb.o"
+"stm32l073_kamami_board\4_digit_7_segment.o"
 "stm32l073_kamami_board\stm32l0xx_hal_adc.o"
 "stm32l073_kamami_board\stm32l0xx_hal_adc_ex.o"
 "stm32l073_kamami_board\stm32l0xx_hal.o"
