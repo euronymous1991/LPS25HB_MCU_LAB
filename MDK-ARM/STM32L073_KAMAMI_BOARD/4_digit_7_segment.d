@@ -35,4 +35,5 @@ stm32l073_kamami_board/4_digit_7_segment.o: \
   ..\Drivers\STM32L0xx_HAL_Driver\Inc\stm32l0xx_hal_spi.h \
   ..\Drivers\STM32L0xx_HAL_Driver\Inc\stm32l0xx_hal_uart.h \
   ..\Drivers\STM32L0xx_HAL_Driver\Inc\stm32l0xx_hal_uart_ex.h \
+  C:\Keilis_V537\ARM\ARMCLANG\Bin\..\include\stdio.h \
   ..\Core\Inc\4_digit_7_segment.h

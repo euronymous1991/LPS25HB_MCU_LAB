@@ -23,7 +23,7 @@
 /* USER CODE BEGIN Includes */
 #include "LPS25HB.h"
 #include "4_digit_7_segment.h"
-#include "stdio.h"
+
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -33,37 +33,9 @@
 
 /* Private define ------------------------------------------------------------*/
 /* USER CODE BEGIN PD */
-#ifdef COMMON_ANODE 
-// Segment numbers stored in the array
-uint8_t segmentNumber[10] = {
-        ~(Aseg|Bseg|Cseg|Dseg|Eseg|Fseg),  // 0
-        ~(Bseg|Cseg),  // 1
-        ~(Aseg|Bseg|Gseg|Eseg|Dseg),  // 2
-        ~(Aseg|Bseg|Cseg|Dseg|Gseg),  // 3
-        ~(Bseg|Cseg|Fseg|Gseg),  // 4
-        ~(Aseg|Fseg|Cseg|Dseg|Gseg),  // 5
-        ~(Aseg|Eseg|Cseg|Dseg|Gseg|Fseg),  // 6
-        ~(Aseg|Bseg|Cseg),  // 7
-        ~(Aseg|Bseg|Cseg|Dseg|Eseg|Fseg|Gseg),  // 8
-        ~(Aseg|Bseg|Cseg|Dseg|Fseg|Gseg)   // 9  // 9
-};
-#endif
-#ifdef COMMON_CATODE
-uint8_t segmentNumber[10] = {
-        (Aseg|Bseg|Cseg|Dseg|Eseg|Fseg),  // 0
-        (Bseg|Cseg),  // 1
-        (Aseg|Bseg|Gseg|Eseg|Dseg),  // 2
-        (Aseg|Bseg|Cseg|Dseg|Gseg),  // 3
-        (Bseg|Cseg|Fseg|Gseg),  // 4
-        (Aseg|Fseg|Cseg|Dseg|Gseg),  // 5
-        (Aseg|Eseg|Cseg|Dseg|Gseg|Fseg),  // 6
-        (Aseg|Bseg|Cseg),  // 7
-        (Aseg|Bseg|Cseg|Dseg|Eseg|Fseg|Gseg),  // 8
-        (Aseg|Bseg|Cseg|Dseg|Fseg|Gseg)   // 9
-};
-#endif
 
-char mas[4]={0,0,0,0};
+
+
 /* USER CODE END PD */
 
 /* Private macro -------------------------------------------------------------*/
@@ -83,8 +55,7 @@ UART_HandleTypeDef huart2;
 /* USER CODE BEGIN PV */
 float temperatura; // Temperatura
 uint32_t laikas=0;
-char a[4]={1,2,3,4};
-uint8_t temp1, temp2, temp3, temp4;
+
 
 /* USER CODE END PV */
 
@@ -142,48 +113,13 @@ int main(void)
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
-  while (1)
-  {
+  while (1) {
+    if (laikas >= 1000) {
+      temperatura = LPS25HB_Measure_Temperature( &hi2c2);
+      laikas = 0;
+    }
+    SevenSegment_Display(temperatura);
 
-		
-		
-				if (laikas >=1000)
-{
-	temperatura = LPS25HB_Measure_Temperature(&hi2c2);
-	sprintf(mas,"%04.0f",temperatura);
-	temp1 = mas[0]-48;
-	  temp2 = mas[1]-48; //2 - 2nd digit
-	  temp3 = mas[2]-48; //3 - 3rd digit
-	  temp4 = mas[3]-48; //4 - 4th digit
-
-//HAL_GPIO_TogglePin(RGB_LD1_GPIO_Port,RGB_LD1_Pin); // LED katodo valdymas
- // parametru pavadinimai iš CubeMx sugeneruoto failo main.h
-laikas =0;
-}
-
-	  SevenSegment_Update(segmentNumber[temp1]);
-D1_LOW();
-HAL_Delay(2);
-D1_HIGH();
-
-	  SevenSegment_Update(segmentNumber[temp2]);
-D2_LOW();
-
-HAL_Delay(2);
-D2_HIGH();
-
-	  SevenSegment_Update(segmentNumber[temp3]);
-D3_LOW();
-
-HAL_Delay(2);
-D3_HIGH();
-
-	  SevenSegment_Update(segmentNumber[temp4]);
-D4_LOW();
-
-HAL_Delay(2);
-
-D4_HIGH();
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */

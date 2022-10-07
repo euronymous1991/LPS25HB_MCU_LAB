@@ -31,3 +31,6 @@
 #define D3_LOW() HAL_GPIO_WritePin(COM3_GPIO_Port, COM3_Pin, GPIO_PIN_RESET)
 #define D4_HIGH() HAL_GPIO_WritePin(COM4_GPIO_Port, COM4_Pin, GPIO_PIN_SET)
 #define D4_LOW() HAL_GPIO_WritePin(COM4_GPIO_Port, COM4_Pin, GPIO_PIN_RESET)
+
+void SevenSegment_Update(uint8_t number);
+void SevenSegment_Display(float to_display);
