@@ -415,9 +415,9 @@
               <FilePath>..\Core\Src\LPS25HB.c</FilePath>
             </File>
             <File>
-              <FileName>4_digit_7_segment.c</FileName>
+              <FileName>4DIG_7SEG_DISPLAY.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\Core\Src\4_digit_7_segment.c</FilePath>
+              <FilePath>..\Core\Src\4DIG_7SEG_DISPLAY.c</FilePath>
             </File>
           </Files>
         </Group>

@@ -22,7 +22,7 @@
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 #include "LPS25HB.h"
-#include "4_digit_7_segment.h"
+#include "4DIG_7SEG_DISPLAY.h"
 
 /* USER CODE END Includes */
 

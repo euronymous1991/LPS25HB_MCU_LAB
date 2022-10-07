@@ -1,4 +1,5 @@
-stm32l073_kamami_board/main.o: ..\Core\Src\main.c ..\Core\Inc\main.h \
+stm32l073_kamami_board/4dig_7seg_display.o: \
+  ..\Core\Src\4DIG_7SEG_DISPLAY.c ..\Core\Inc\main.h \
   ..\Drivers\STM32L0xx_HAL_Driver\Inc\stm32l0xx_hal.h \
   ..\Core\Inc\stm32l0xx_hal_conf.h \
   ..\Drivers\STM32L0xx_HAL_Driver\Inc\stm32l0xx_hal_rcc.h \
@@ -34,4 +35,5 @@ stm32l073_kamami_board/main.o: ..\Core\Src\main.c ..\Core\Inc\main.h \
   ..\Drivers\STM32L0xx_HAL_Driver\Inc\stm32l0xx_hal_spi.h \
   ..\Drivers\STM32L0xx_HAL_Driver\Inc\stm32l0xx_hal_uart.h \
   ..\Drivers\STM32L0xx_HAL_Driver\Inc\stm32l0xx_hal_uart_ex.h \
-  ..\Core\Inc\LPS25HB.h ..\Core\Inc\4DIG_7SEG_DISPLAY.h
+  C:\Keilis_V537\ARM\ARMCLANG\Bin\..\include\stdio.h \
+  ..\Core\Inc\4DIG_7SEG_DISPLAY.h

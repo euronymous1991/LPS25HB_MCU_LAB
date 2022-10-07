@@ -319,8 +319,8 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\Core\Src\4_digit_7_segment.c</PathWithFileName>
-      <FilenameWithoutPath>4_digit_7_segment.c</FilenameWithoutPath>
+      <PathWithFileName>..\Core\Src\4DIG_7SEG_DISPLAY.c</PathWithFileName>
+      <FilenameWithoutPath>4DIG_7SEG_DISPLAY.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>

@@ -1,6 +1,6 @@
 #include "main.h"
 #include "stdio.h"
-#include "4_digit_7_segment.h"
+#include "4DIG_7SEG_DISPLAY.h"
 
 char mas[4] = {
   0,
