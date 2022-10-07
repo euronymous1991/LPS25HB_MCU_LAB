@@ -118,7 +118,7 @@ int main(void)
       temperatura = LPS25HB_Measure_Temperature( &hi2c2);
       laikas = 0;
     }
-    SevenSegment_Display(1325.35);
+    SevenSegment_Display(temperatura);
 
     /* USER CODE END WHILE */
 

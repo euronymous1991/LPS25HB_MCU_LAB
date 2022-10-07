@@ -1,5 +1,5 @@
 // sablonai priklauso nuo principines schemos pajungimo
-#define COMMON_ANODE   //COMMON_ANODE  COMMON_CATODE
+#define COMMON_CATODE   //COMMON_ANODE  COMMON_CATODE
 
 #define Aseg 0x40 // PC6
 #define Bseg 0x10 // PC4
