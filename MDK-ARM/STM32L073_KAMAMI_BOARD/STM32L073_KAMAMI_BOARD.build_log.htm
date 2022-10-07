@@ -27,11 +27,18 @@ Project File Date:  10/07/2022
 <h2>Output:</h2>
 *** Using Compiler 'V6.18', folder: 'C:\Keilis_V537\ARM\ARMCLANG\Bin'
 Build target 'STM32L073_KAMAMI_BOARD'
-compiling 4_digit_7_segment.c...
+../Core/Src/main.c(168): warning: implicit declaration of function 'SevenSegment_Update' is invalid in C99 [-Wimplicit-function-declaration]
+          SevenSegment_Update(segmentNumber[temp1]);
+          ^
+../Core/Src/main.c(157): warning: 'sprintf' will always overflow; destination buffer has size 4, but format string expands to at least 5 [-Wfortify-source]
+        sprintf(mas,"%04.0f",temperatura);
+        ^
+2 warnings generated.
+compiling main.c...
 linking...
-Program Size: Code=15768 RO-data=324 RW-data=12 ZI-data=2044  
+Program Size: Code=22376 RO-data=880 RW-data=20 ZI-data=2052  
 FromELF: creating hex file...
-"STM32L073_KAMAMI_BOARD\STM32L073_KAMAMI_BOARD.axf" - 0 Error(s), 0 Warning(s).
+"STM32L073_KAMAMI_BOARD\STM32L073_KAMAMI_BOARD.axf" - 0 Error(s), 2 Warning(s).
 
 <h2>Software Packages used:</h2>
 
