@@ -13,16 +13,16 @@ uint8_t temp1, temp2, temp3, temp4;
 #ifdef COMMON_ANODE
 // Segment numbers stored in the array
 uint8_t segmentNumber[10] = {
-  ~(Aseg | Bseg | Cseg | Dseg | Eseg | Fseg), 			// 0
-  ~(Bseg | Cseg), 																	// 1
-  ~(Aseg | Bseg | Gseg | Eseg | Dseg), 							// 2
-  ~(Aseg | Bseg | Cseg | Dseg | Gseg), 							// 3
-  ~(Bseg | Cseg | Fseg | Gseg), 										// 4
-  ~(Aseg | Fseg | Cseg | Dseg | Gseg), 							// 5
-  ~(Aseg | Eseg | Cseg | Dseg | Gseg | Fseg),				// 6
-  ~(Aseg | Bseg | Cseg), 														// 7
-  ~(Aseg | Bseg | Cseg | Dseg | Eseg | Fseg | Gseg),// 8
-  ~(Aseg | Bseg | Cseg | Dseg | Fseg | Gseg)  			// 9
+  ~(Aseg | Bseg | Cseg | Dseg | Eseg | Fseg | DPseg), 			// 0
+  ~(Bseg | Cseg | DPseg), 																	// 1
+  ~(Aseg | Bseg | Gseg | Eseg | Dseg | DPseg), 							// 2
+  ~(Aseg | Bseg | Cseg | Dseg | Gseg | DPseg), 							// 3
+  ~(Bseg | Cseg | Fseg | Gseg | DPseg), 										// 4
+  ~(Aseg | Fseg | Cseg | Dseg | Gseg | DPseg), 							// 5
+  ~(Aseg | Eseg | Cseg | Dseg | Gseg | Fseg | DPseg),				// 6
+  ~(Aseg | Bseg | Cseg | DPseg), 														// 7
+  ~(Aseg | Bseg | Cseg | Dseg | Eseg | Fseg | Gseg | DPseg),// 8
+  ~(Aseg | Bseg | Cseg | Dseg | Fseg | Gseg | DPseg)  			// 9
 };
 #endif
 #ifdef COMMON_CATODE
@@ -60,19 +60,16 @@ void SevenSegment_Display(float to_display) {
 #ifdef COMMON_ANODE
   SevenSegment_Update(segmentNumber[temp1]);
 	D1_HIGH();
- 
   HAL_Delay(2);
   D1_LOW();
 
   SevenSegment_Update(segmentNumber[temp2]);
 	D2_HIGH();
- 
   HAL_Delay(2);
   D2_LOW();
 
   SevenSegment_Update(segmentNumber[temp3]);
 	D3_HIGH();
- 
   HAL_Delay(2);
   D3_LOW();
 
