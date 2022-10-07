@@ -48,6 +48,7 @@ void SevenSegment_Update(uint8_t number) {
   HAL_GPIO_WritePin(GPIOC, GPIO_PIN_4, ((number >> 4) & 0x01));
   HAL_GPIO_WritePin(GPIOC, GPIO_PIN_5, ((number >> 5) & 0x01));
   HAL_GPIO_WritePin(GPIOC, GPIO_PIN_6, ((number >> 6) & 0x01));
+	HAL_GPIO_WritePin(GPIOC, GPIO_PIN_7, ((number >> 7) & 0x01));
 }
 
 void SevenSegment_Display(float to_display) {
