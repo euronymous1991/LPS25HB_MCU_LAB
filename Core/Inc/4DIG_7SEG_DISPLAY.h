@@ -1,6 +1,7 @@
 #include "main.h"
 // sablonai priklauso nuo principines schemos pajungimo
 #define COMMON_CATODE   //COMMON_ANODE  COMMON_CATODE
+#define refresh_rate 2  // in ms
 
 #define Aseg 0x40 // PC6
 #define Bseg 0x10 // PC4

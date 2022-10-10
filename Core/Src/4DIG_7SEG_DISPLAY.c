@@ -63,44 +63,44 @@ void SevenSegment_Display(float to_display) {
 	#ifdef COMMON_CATODE
 	SevenSegment_Update(segmentNumber[temp1]);
   D1_LOW();
-  HAL_Delay(2);
+  HAL_Delay(refresh_rate);
   D1_HIGH();
 
   SevenSegment_Update(segmentNumber[temp2]);
   D2_LOW();
-  HAL_Delay(2);
+  HAL_Delay(refresh_rate);
   D2_HIGH();
 
   SevenSegment_Update(segmentNumber[temp3]);
   D3_LOW();
-  HAL_Delay(2);
+  HAL_Delay(refresh_rate);
   D3_HIGH();
 
   SevenSegment_Update(segmentNumber[temp4]);
   D4_LOW();
-  HAL_Delay(2);
+  HAL_Delay(refresh_rate);
   D4_HIGH();
 	#endif
 			
 #ifdef COMMON_ANODE
   SevenSegment_Update(segmentNumber[temp1]);
 	D1_HIGH();
-  HAL_Delay(2);
+  HAL_Delay(refresh_rate);
   D1_LOW();
 
   SevenSegment_Update(segmentNumber[temp2]);
 	D2_HIGH();
-  HAL_Delay(2);
+  HAL_Delay(refresh_rate);
   D2_LOW();
 
   SevenSegment_Update(segmentNumber[temp3]);
 	D3_HIGH();
-  HAL_Delay(2);
+  HAL_Delay(refresh_rate);
   D3_LOW();
 
   SevenSegment_Update(segmentNumber[temp4]);
 	D4_HIGH();
-  HAL_Delay(2);
+  HAL_Delay(refresh_rate);
   D4_LOW();
 	#endif
 }
