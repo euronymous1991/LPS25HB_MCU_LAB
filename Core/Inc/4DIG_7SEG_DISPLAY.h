@@ -1,3 +1,4 @@
+#include "main.h"
 // sablonai priklauso nuo principines schemos pajungimo
 #define COMMON_CATODE   //COMMON_ANODE  COMMON_CATODE
 

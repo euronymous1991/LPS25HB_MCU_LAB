@@ -41,15 +41,16 @@ uint8_t segmentNumber[10] = {
 #endif
 
 void SevenSegment_Update(uint8_t number) {
-  HAL_GPIO_WritePin(GPIOC, GPIO_PIN_0, ((number >> 0) & 0x01));
-  HAL_GPIO_WritePin(GPIOC, GPIO_PIN_1, ((number >> 1) & 0x01));
-  HAL_GPIO_WritePin(GPIOC, GPIO_PIN_2, ((number >> 2) & 0x01));
-  HAL_GPIO_WritePin(GPIOC, GPIO_PIN_3, ((number >> 3) & 0x01));
-  HAL_GPIO_WritePin(GPIOC, GPIO_PIN_4, ((number >> 4) & 0x01));
-  HAL_GPIO_WritePin(GPIOC, GPIO_PIN_5, ((number >> 5) & 0x01));
-  HAL_GPIO_WritePin(GPIOC, GPIO_PIN_6, ((number >> 6) & 0x01));
-	HAL_GPIO_WritePin(GPIOC, GPIO_PIN_7, ((number >> 7) & 0x01));
+  HAL_GPIO_WritePin(GPIOC, Seg_G_Pin, ((number >> 0) & 0x01));
+  HAL_GPIO_WritePin(GPIOC, Seg_D_Pin, ((number >> 1) & 0x01));
+  HAL_GPIO_WritePin(GPIOC, Seg_E_Pin, ((number >> 2) & 0x01));
+  HAL_GPIO_WritePin(GPIOC, Seg_C_Pin, ((number >> 3) & 0x01));
+  HAL_GPIO_WritePin(GPIOC, Seg_B_Pin, ((number >> 4) & 0x01));
+  HAL_GPIO_WritePin(GPIOC, Seg_F_Pin, ((number >> 5) & 0x01));
+  HAL_GPIO_WritePin(GPIOC, Seg_A_Pin, ((number >> 6) & 0x01));
+	HAL_GPIO_WritePin(GPIOC, Decimal_Point_Pin, ((number >> 7) & 0x01));
 }
+
 
 void SevenSegment_Display(float to_display) {
   sprintf(mas, "%4.0f", to_display);
