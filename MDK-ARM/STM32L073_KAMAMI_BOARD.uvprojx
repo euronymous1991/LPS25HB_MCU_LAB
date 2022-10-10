@@ -395,6 +395,16 @@
           <GroupName>Application/User/Core</GroupName>
           <Files>
             <File>
+              <FileName>LPS25HB.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Core\Src\LPS25HB.c</FilePath>
+            </File>
+            <File>
+              <FileName>4DIG_7SEG_DISPLAY.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Core\Src\4DIG_7SEG_DISPLAY.c</FilePath>
+            </File>
+            <File>
               <FileName>main.c</FileName>
               <FileType>1</FileType>
               <FilePath>../Core/Src/main.c</FilePath>
@@ -408,16 +418,6 @@
               <FileName>stm32l0xx_hal_msp.c</FileName>
               <FileType>1</FileType>
               <FilePath>../Core/Src/stm32l0xx_hal_msp.c</FilePath>
-            </File>
-            <File>
-              <FileName>LPS25HB.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\Core\Src\LPS25HB.c</FilePath>
-            </File>
-            <File>
-              <FileName>4DIG_7SEG_DISPLAY.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\Core\Src\4DIG_7SEG_DISPLAY.c</FilePath>
             </File>
           </Files>
         </Group>

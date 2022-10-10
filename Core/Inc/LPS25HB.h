@@ -19,7 +19,3 @@
 uint8_t LPS25HB_Initialise(I2C_HandleTypeDef *i2cHandle);
 float   LPS25HB_Measure_Temperature(I2C_HandleTypeDef *i2cHandle);
 /* USER CODE END PFP */
-
-/* USER CODE BEGIN PV */
-extern uint32_t laikas; // systick
-/* USER CODE END PV */
