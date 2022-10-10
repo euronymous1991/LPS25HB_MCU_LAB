@@ -1,6 +1,6 @@
 # Slėgio jutiklio LPS25HB nuskaitymas per I2C sąsają
 
-## 1	Darbo tikslai
+## Darbo tikslai
 
 1.	Išmokti nuskaityti bei apdoroti skaitmeninių sensorių duomenis per I2C sąsają.
 
