@@ -10,9 +10,7 @@
 #define LPS25HB_CTRL_REG1 0x20 //Contains PD, BDU and more
 #define LPS25HB_CTRL_REG2 0x21 //Contains one-shot mode and FIFO settings
 #define LPS25HB_RES_CONF 0x10 //Pressure and temperature Resolution
-/*---------------------Konfiguraciniai bitai--------------------------------*/
-#define LPS25HB_CTRL_REG1_PD 0x80 //Power Down when 0, active mode when 1 (Default 0)
-#define LPS25HB_CTRL_REG2_ONE_SHOT 0x1 //One shot mode enabled, obtains a new dataset
+
 /* Private function prototypes -----------------------------------------------*/
 
 /* USER CODE BEGIN PFP */
