@@ -56,7 +56,7 @@ UART_HandleTypeDef huart2;
 
 /* USER CODE BEGIN PV */
 float temperatura; // Temperatura
-int counterrr;
+
 
 
 /* USER CODE END PV */
@@ -79,7 +79,6 @@ static void MX_TIM2_Init(void);
 void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim) {
       if (htim->Instance == TIM2) {
               temperatura = LPS25HB_Measure_Temperature( &hi2c2);
-							counterrr++;
       }
 }
 /* USER CODE END 0 */
