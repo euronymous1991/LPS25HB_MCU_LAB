@@ -1,5 +1,10 @@
 # Slėgio jutiklio LPS25HB nuskaitymas per I2C sąsają
 
+## 1	Darbo tikslai
+
+1.	Išmokti nuskaityti bei apdoroti skaitmeninių sensorių duomenis per I2C sąsają.
+
+
 ## Užduotys
 1.	Pakeiskite programa taip jog 4 skaitmenų 7 segmentų ekranėlyje būtų atvaizduojama temperatūra su dviem skaičiais po kablelio (kablelis turi būti atvaizduojamas ekranėlyje).
 2.	Sukurkite naują funkciją kurios pagalba būtų nuskaitomi slėgio (mBar) duomenys, bei jie atvaizduojami 4 skaitmenų 7 segmentų ekranėlyje.
