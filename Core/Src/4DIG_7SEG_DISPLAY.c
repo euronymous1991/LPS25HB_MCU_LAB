@@ -2,11 +2,12 @@
 #include "stdio.h"
 #include "4DIG_7SEG_DISPLAY.h"
 
-char mas[4] = {
+char mas[5] = {
   0,
   0,
   0,
-  0
+  0,
+	0
 };
 uint8_t temp1, temp2, temp3, temp4;
 
@@ -59,6 +60,28 @@ void SevenSegment_Display(float to_display) {
   temp3 = mas[2] - 48; //3 - 3rd digit
   temp4 = mas[3] - 48; //4 - 4th digit
 	
+	#ifdef COMMON_CATODE
+	SevenSegment_Update(segmentNumber[temp1]);
+  D1_LOW();
+  HAL_Delay(2);
+  D1_HIGH();
+
+  SevenSegment_Update(segmentNumber[temp2]);
+  D2_LOW();
+  HAL_Delay(2);
+  D2_HIGH();
+
+  SevenSegment_Update(segmentNumber[temp3]);
+  D3_LOW();
+  HAL_Delay(2);
+  D3_HIGH();
+
+  SevenSegment_Update(segmentNumber[temp4]);
+  D4_LOW();
+  HAL_Delay(2);
+  D4_HIGH();
+	#endif
+			
 #ifdef COMMON_ANODE
   SevenSegment_Update(segmentNumber[temp1]);
 	D1_HIGH();
@@ -79,27 +102,5 @@ void SevenSegment_Display(float to_display) {
 	D4_HIGH();
   HAL_Delay(2);
   D4_LOW();
-	#endif
-	
-	#ifdef COMMON_CATODE
-	  SevenSegment_Update(segmentNumber[temp1]);
-  D1_LOW();
-  HAL_Delay(2);
-  D1_HIGH();
-
-  SevenSegment_Update(segmentNumber[temp2]);
-  D2_LOW();
-  HAL_Delay(2);
-  D2_HIGH();
-
-  SevenSegment_Update(segmentNumber[temp3]);
-  D3_LOW();
-  HAL_Delay(2);
-  D3_HIGH();
-
-  SevenSegment_Update(segmentNumber[temp4]);
-  D4_LOW();
-  HAL_Delay(2);
-  D4_HIGH();
 	#endif
 }

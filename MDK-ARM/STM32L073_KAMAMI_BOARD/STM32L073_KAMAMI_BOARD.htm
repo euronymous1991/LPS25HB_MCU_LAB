@@ -3,7 +3,7 @@
 <title>Static Call Graph - [STM32L073_KAMAMI_BOARD\STM32L073_KAMAMI_BOARD.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image STM32L073_KAMAMI_BOARD\STM32L073_KAMAMI_BOARD.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 6180002: Last Updated: Mon Oct 10 10:44:23 2022
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 6180002: Last Updated: Mon Oct 10 11:14:45 2022
 <BR><P>
 <H3>Maximum Stack Usage =        368 bytes + Unknown(Functions without stacksize, Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -1383,7 +1383,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[c4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_TIM_IRQHandler
 </UL>
 
-<P><STRONG><a name="[c8]"></a>HAL_TIM_PeriodElapsedCallback</STRONG> (Thumb, 44 bytes, Stack size 16 bytes, main.o(.text.HAL_TIM_PeriodElapsedCallback))
+<P><STRONG><a name="[c8]"></a>HAL_TIM_PeriodElapsedCallback</STRONG> (Thumb, 36 bytes, Stack size 16 bytes, main.o(.text.HAL_TIM_PeriodElapsedCallback))
 <BR><BR>[Stack]<UL><LI>Max Depth = 220<LI>Call Chain = HAL_TIM_PeriodElapsedCallback &rArr; LPS25HB_Measure_Temperature &rArr; HAL_I2C_Mem_Write &rArr; I2C_RequestMemoryWrite &rArr; I2C_WaitOnTXISFlagUntilTimeout &rArr; I2C_IsAcknowledgeFailed &rArr; I2C_Flush_TXDR
 </UL>
 <BR>[Calls]<UL><LI><a href="#[ca]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LPS25HB_Measure_Temperature
