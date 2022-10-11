@@ -27,8 +27,8 @@ float LPS25HB_Measure_Temperature(I2C_HandleTypeDef *i2cHandle) {
     return 1;
   }
    
-    HAL_I2C_Mem_Read( i2cHandle, LPS25HB_ADDRESS, 0x2B, 1, &TEMP_OUT_L, 1, 100);
-    HAL_I2C_Mem_Read( i2cHandle, LPS25HB_ADDRESS, 0x2C, 1, &TEMP_OUT_H, 1, 100);
+    HAL_I2C_Mem_Read( i2cHandle, LPS25HB_ADDRESS, LPS25HB_TEMP_OUT_L, 1, &TEMP_OUT_L, 1, 100);
+    HAL_I2C_Mem_Read( i2cHandle, LPS25HB_ADDRESS, LPS25HB_TEMP_OUT_H, 1, &TEMP_OUT_H, 1, 100);
 
     val = (TEMP_OUT_H << 8) | (TEMP_OUT_L);
     return 42.5f + val / 480.0f;
